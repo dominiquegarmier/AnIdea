@@ -8,5 +8,5 @@ AnIdea_pre1.0.01:
     - finds solution for certain boundry condidtions
     - finds approximation around given x's
 
--Known issues:
+- Known issues:
     - doesnt work well if the range of x's is too big
