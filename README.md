@@ -9,4 +9,3 @@ AnIdea_pre1.0.01
 Known issues:
 - doesnt work well if the range of x^s is too big
 - 
-
