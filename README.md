@@ -1,5 +1,9 @@
 git Repository for AnIdea MA, by Dominique F. Garmier
 
+Roadmap:
+
+https://docs.google.com/spreadsheets/d/1wTnUjE_NQhBWTI7i3c_2LWTzUnotB3J4dN51a2IaZcQ/edit?usp=sharing
+
 Changes:
 
 AnIdea_pre1.0.01:
