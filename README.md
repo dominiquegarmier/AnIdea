@@ -4,6 +4,8 @@ Roadmap:
 
 https://docs.google.com/spreadsheets/d/1wTnUjE_NQhBWTI7i3c_2LWTzUnotB3J4dN51a2IaZcQ/edit?usp=sharing
 
+All Versions can be found in "1.0-dev" branch
+
 Changes:
 
 AnIdea_pre1.0.01:
