@@ -1,19 +1,20 @@
 git Repository for AnIdea MA, by Dominique F. Garmier
 
-Roadmap:
+Versions:
+    
+    AnIdea_pre1.0.0:
 
-https://docs.google.com/spreadsheets/d/1wTnUjE_NQhBWTI7i3c_2LWTzUnotB3J4dN51a2IaZcQ/edit?usp=sharing
+        - has to ability to train a function for given initial Conditions
+        - works in time range of 0 - 10
+        - quickly breaksdown after that time range
+        - converges to the same values as rk4        
 
-All Versions can be found in "1.0-dev" branch
-
-Changes:
-
-AnIdea_pre1.0.01:
-- Features:
-    - approximation of solutions of 1st order linear differential equations
-    - finds solution for certain boundry condidtion
-    - finds approximation around given x's
-
-- Known issues:
-    - doesnt work well if the range of x's is too big
-    - Neural Network doesnt always opimize, returns Nan weights
+    AnIdea_pre1.1.0:
+    
+        - a function of time and the initial conditions, which allows it to be used as a "prediction" function in an algorithem like rk4
+        - has never been properly trained
+        
+        
+    AnIdea_pre1.1.1:
+    
+        - newer version of 1.1.0, where the weights are a function of the initial conditions.
