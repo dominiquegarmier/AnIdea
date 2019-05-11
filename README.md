@@ -1,5 +1,7 @@
 git Repository for AnIdea MA, by Dominique F. Garmier
 
+All Code is available in 1.0-dev Branch
+
 Versions:
     
     AnIdea_pre1.0.0:
