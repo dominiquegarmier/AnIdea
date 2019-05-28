@@ -20,3 +20,10 @@ Versions:
     AnIdea_pre1.1.1:
     
         - newer version of 1.1.0, where the weights are a function of the initial conditions.
+        
+    AnIdea_pre1.2.0:
+    
+        - now supports a fully working file system to create new instances, loading is not yet implemented
+        - has easy to create models with costom architectures
+        - AnIdeaVis offers first visualizations of loss to analyse the training phase
+            
