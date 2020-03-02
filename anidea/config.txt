@@ -1,0 +1,31 @@
+{'output_path': './out',
+ 'models_path': './models',
+ 'do_preview': True,
+ 'epochs': 30000,
+ 'backup_frequency': 1000,
+ 'omega': 1,
+ 'default_hyperparams': {
+ 'model_architecture': [
+ [1, 'input layer'],
+ [10, 'p2'],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, 'p2'],
+ [1, 'output layer']
+ ],
+ 'loss_function': 'linloss',
+ 't_batchsize': 100,
+ 't_range': 0.5,
+ 'bc_batchsize': 100,
+ 'bc_variance': 2,
+ 'learningrate': 0.0001,
+ 'batch_grouping': 10
+ },
+ 'eval_inital_conditions': [2, 0, 0],
+ 'eval_stepsize': 0.15,
+ 'eval_stepresolution': 10,
+ 'eval_t_range': 20,
+ 'toDat': True,
+ 'toPng': True}

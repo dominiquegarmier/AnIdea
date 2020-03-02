@@ -1,0 +1,17 @@
+{'model_architecture': [
+ [1, 'input layer'],
+ [10, 'p2'],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, [2, 2, 2]],
+ [10, 'p2'],
+ [1, 'output layer']
+ ],
+ 'loss_function': 'linloss',
+ 't_batchsize': 100,
+ 't_range': 0.5,
+ 'bc_batchsize': 100,
+ 'bc_variance': 2,
+ 'learningrate': 0.0001,
+ 'batch_grouping': 10}
