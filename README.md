@@ -1,57 +1,110 @@
-AnIdea (c) 2019 Dominique F. Garmier All Rights Reserved
-Version: pre2.1
---------------------------------------------------------
-REQUIREMENTS:
+# AnIdea
 
-numpy==1.16.3
-matplotlib==3.0.3
-tensorflow==1.13.1
+## About
 
-FOLDER STRUCTURE:
+This is the git repository for the Maturity Thesis **AnIdea: Approximation der Löung einer Differentialgleichung mit neuronalent Netzwerken** by **Dominique F. Garmier**
 
-please make sure these files and folders are in their correct location relative to ROOT
+originally submited in 2019.
 
-ROOT---models
-	 |-out
-	 |
-	 |-src--machinelearning.py
-	 |	  |-numerics.py
-	 |	  |-plots.py
-	 |	  |-tfopsbatchjac.py
-	 |	  |-utils.py
-	 |
-	 |-tools-FPOs.py
-	 |
-	 |-run.py
-	 |-evaluate.py
-	 |-training.py
-	 |-vis.py
-	 |
-	 |-(scheduler.py)
+### AnIdea
 
+AnIdea is a neural network based numeric algorithm for solving the initial value problem for non-linear differential equations of first order. As shown in the [paper](./paper/Maturaarbeit_Dominique_Garmier_AnIdea.pdf) the algorithm is able to outperform pre-existing algorithms for specific conditions.
 
+This repository was originally created in 2019. For sake of better readablitiy the repository was restructured in late 2021, without chaning any of the major components.
 
-TO RUN:
+### Awards
 
-run python in ROOT-folder (same as run.py) and call run.py
+#### Rotary Prize
 
+in 2020 this thesis was awarded the prize for **"best maturity thesis at Kantonsschule Wohlen for the year 2019"**
 
-try these: (to stop training: either wait for the 30,000 Epochs to be over or press ctrl+c, this shouldn't break anything)
+#### Pro Argovia
 
-- run.py -h 																: for help on the possible args
+in 2020 this thesis was recognized as **"one of the five best maturity theses in the Kanton of Aargau"** (region of Switzerland)
 
-- run.py 																	: prints the logo and version
+#### Schweizer Jugend Forscht (Swiss Youth Research)
 
-- run.py -t --instancename *some name* --modelname OptimalHyperparameters	: trains an new instance using the optimal hyperparameters
+in 2020 this thesis recieved the 2nd highest possible mark **"very good"** in the national contest 
 
-- run.py -e --instancename BestResult --plotall								: creates the most important plots of BestResult (take a look at the config to use the values you want, use h=0.15056 for optimal accuracy) (set 'toPng' to false in config to get direct matplotlib output) (add --plotst to plot e(h) scatter plot, though this will take a while)
+### Use
 
-- run.py -l --instancename BestResult										: continues training BestResults (make sure epochs isnt set to 30,000 in config, else it will end imediatly)
+#### requirements
 
-- run.py -t 																: trains standard instance with random name
+compatible python version: `3.6`
 
-- run.py -t --instancename HelloWorld --modelname HelloWorld 				: trains an example instance
+download repo
 
-- scheduler.py																: (advanced) this will schedule a batch of in this case 5 instances (with different hyperparamters) to be trained and evaluated one after an other. Edit the .py file for more options.
+```
+$ git clone git@github.com:DominiqueGarmier/AnIdea.git
+$ cd anidea
+```
 
-- tools/FPOs.py																: this is the scrip used to calculate the FPOs of the NN. Again edit the .py file to see what is going on.
+install the dependencies
+
+```
+$ virtualenv .venv p=python3.6
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+#### running the algorithm
+
+switch directory and run python on `run.py`
+```
+$ cd anidea
+$ python run.py *args*
+```
+
+#### Running Modes
+
+##### Version
+```
+$ python run.py
+```
+prints version and logo
+
+##### Help
+```
+$ python run.py -h
+```
+prints help and all possible arguments
+
+##### Others
+
+You can try to run these commands:
+
+```
+$ python run.py -t --instancename *some name* --modelname OptimalHyperparameters
+```
+
+trains an new instance using the optimal hyperparameters
+
+```
+$ python run.py -e --instancename BestResult --plotall
+```
+creates the most important plots of BestResult (take a look at the config to use the values you want, use h=0.15056 for optimal accuracy) (set 'toPng' to false in config to get direct matplotlib output) (add --plotst to plot e(h) scatter plot, though this will take a while)
+
+```
+$ python run.py -l --instancename BestResult
+```
+continues training BestResults (make sure epochs isnt set to 30,000 in config, else it will end imediatly)
+
+```
+$ python run.py -t
+```
+trains standard instance with random name
+
+```
+$ python run.py -t --instancename HelloWorld --modelname HelloWorld
+```
+trains an example instance
+
+```
+$ python scheduler.py
+```
+(advanced) this will schedule a batch of in this case 5 instances (with different hyperparamters) to be trained and evaluated one after an other. Edit the .py file for more options.
+
+```
+$ python tools/FPOs.py
+```
+this is the scrip used to calculate the FPOs of the NN. Again edit the .py file to see what is going on.
